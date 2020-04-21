@@ -19,5 +19,6 @@
     "campaignCss": "./dist/campaign/css/",
     "campaignJs": "./dist/campaign/js",
     "campaignImages": "./dist/campaign/images/"
-  }
+  },
+  "app": "./app/"
 }

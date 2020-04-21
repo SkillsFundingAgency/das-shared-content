@@ -3,7 +3,8 @@
   "version": "0.2.2",
   "description": "DAS Frontend contains the code used across the apprenticeship services ",
   "scripts": {
-    "dev": "node server.js"
+    "dev": "gulp das && node server.js",
+    "start": "node start.js"
   },
   "repository": {
     "type": "git",
@@ -41,6 +42,7 @@
     "jquery-validation-unobtrusive": "^3.2.11",
     "jquery.are-you-sure": "^1.9.0",
     "nunjucks": "^3.2.1",
+    "nodemon": "^2.0.1",
     "plyr": "^3.5.10",
     "rollup-plugin-commonjs": "^9.3.4",
     "rollup-plugin-node-resolve": "^3.4.0",
