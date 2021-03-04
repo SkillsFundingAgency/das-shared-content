@@ -1,0 +1,18 @@
+.app-page-header {
+  background: govuk-colour("light-grey");
+  background: #f0f3f7;
+  padding: 25px 0;
+}
+
+.app-page-header__row {
+  @include govuk-media-query(tablet) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.app-page-header__heading {
+  @include govuk-media-query(tablet) {
+    margin: 0;
+  }
+}

@@ -6,8 +6,21 @@ const rename = require('gulp-rename');
 const paths = require('../../config/paths.json');
 const sassOptions = require('../../config/sassOptions.js');
 
+gulp.task('app-watch-sass', function() {
+  return gulp.watch('./src/app/**/*.scss', gulp.series('app-compile-sass')).on('change', function (file) {
+    console.log(`File ${file} was changed, running tasks...`);
+  });
+});
+
+gulp.task('app-compile-sass', function() {
+  return gulp.src('./src/app/**/*.scss')
+    .pipe(sass(sassOptions))
+    .pipe(gulp.dest('./dist/app/'));
+});
+
+
 gulp.task('das-watch-sass', function() {
-  return gulp.watch(paths.src.dasSass, gulp.series('das-compile-sass')).on('change', function (file) {
+  return gulp.watch('./dist/app/', gulp.series('das-compile-sass')).on('change', function (file) {
     console.log(`File ${file} was changed, running tasks...`);
   });
 });

@@ -3,14 +3,49 @@
 {% set hideStatusBanner = true %}
 {% set loggedIn = true %}
 
+{% block afterheader %}
+<div class="app-page-header">
+  <div class="govuk-width-container">
+    <div class="govuk-grid-row app-page-header__row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl app-page-header__heading">My apprenticeship(s)</h1>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+
 {% block content %}
 
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-xl govuk-!-margin-top-6 govuk-!-margin-bottom-3">DAS Frontend</h1>
-        <p class="govuk-body-l">Contains the code you need to start building a user interface for the Digital Apprenticeship Service.</p>
+      <h2 class="govuk-heading-l">Confirming your apprenticeship</h2>
+      <p>Review all the details below to confirm your apprenticeship.</p>
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-warning-text__assistive">Warning</span>
+          You have 14 days to confirm your apprenticeship
+        </strong>
+      </div>
+
+      <ol class="govuk-list app-status-list">
+        <li class="app-status-list__list-item">
+          <a href="#" class="app-status-list__link">
+            <h3 class="app-status-list__link-text">Confirm your apprenticeship details</h3>
+          </a>
+        </li>
+        <li class="app-status-list__list-item">
+          <a href="#" class="app-status-list__link">
+            <h3 class="app-status-list__link-text">Confirm your training details</h3>
+          </a>
+        </li>
+      </ol>
+
     </div>
 </div>
+
 
 
 {% endblock  %}
