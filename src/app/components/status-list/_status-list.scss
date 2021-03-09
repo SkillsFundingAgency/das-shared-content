@@ -1,29 +1,44 @@
 .app-status-list {
-
+  counter-reset: number;
 }
 
 .app-status-list__list-item,
 li.app-status-list__list-item {
   margin-bottom: 15px;
+  counter-increment: number;
   @include govuk-media-query(tablet) {
     margin-bottom: 25px;
   }
 }
 
 .app-status-list__link {
-  display: block;
-  padding: 15px;
+  display: flex;
   border-radius: 10px;
   text-decoration: none;
   box-shadow: 0 0 10px 0 rgba(11, 12, 12, 0.2);
-  border: $govuk-border-width-form-element solid transparent;
+  border: $govuk-border-width-form-element solid #f9f8f8;
   @include govuk-link-style-default;
   &:focus {
     border-color: $govuk-focus-colour;
     outline: $govuk-focus-width solid transparent;
   }
   @include govuk-media-query(tablet) {
-    padding: 25px;
+
+  }
+  &:before {
+    content: counter(number);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    background: #f9f8f8;
+    color: #505a5f;
+    width: 1.85em;
+    border-radius: 9px 0 0 9px;
+    font-size: 1.5rem;
+    @include govuk-media-query(tablet) {
+      font-size: 2.5rem;
+    }
   }
 }
 
