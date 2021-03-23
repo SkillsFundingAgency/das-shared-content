@@ -1,0 +1,35 @@
+.app-user-header {
+  background-color: govuk-colour(blue);
+  margin-top: -10px;
+  padding-top: 20px;
+  padding-bottom: 15px;
+}
+
+.app-user-header__name {
+  color: #fff;
+  margin-bottom: 5px;
+  @include govuk-media-query(tablet) {
+    margin-bottom: 0;
+  }
+}
+
+.app-user-header__link {
+  @include govuk-media-query(tablet) {
+    float: right;
+    margin-top: 5px;
+  }
+}
+
+.app-user-header__link:link,
+.app-user-header__link:visited {
+  color: #fff;
+}
+
+.app-user-header__link:active,
+.app-user-header__link:focus {
+  color: govuk-colour(black);
+}
+
+.app-user-header__border-override {
+  border-color: #134273;
+}
