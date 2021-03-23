@@ -4,20 +4,24 @@
 {% set loggedIn = true %}
 
 {% block afterheader %}
+<div class="app-user-header">
+  <div class="govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-half">
+        <p class="govuk-body-l app-user-header__name">James King</p>
+      </div>
+      <div class="govuk-grid-column-one-half">
+        <a href="#" class="govuk-link app-user-header__link">Sign out</a>
+      </div>
+    </div>
+  </div>
+</div>
 <div class="app-page-header">
   <div class="govuk-width-container">
     <div class="govuk-grid-row app-page-header__row">
       <div class="govuk-grid-column-two-thirds">
         <h1 class="govuk-heading-xl app-page-header__heading">My apprenticeship(s)</h1>
       </div>
-
-
-
-
-
-
-
-
       <div class="govuk-grid-column-one-third">
         <div class="app-page-header__highlight">
           <h2 class="govuk-heading-s">Who has committed so far:</h2>
