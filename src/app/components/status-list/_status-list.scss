@@ -42,9 +42,45 @@ li.app-status-list__list-item {
   }
 }
 
+.app-status-list__link--success {
+  border-color: govuk-tint(govuk-colour("green"), 80);
+  &:before {
+    color: govuk-shade(govuk-colour("green"), 20);
+    background: govuk-tint(govuk-colour("green"), 80);
+  }
+}
+
+.app-status-list__link--error {
+  border-color: govuk-tint(govuk-colour("red"), 80);
+  &:before {
+    color: govuk-shade(govuk-colour("red"), 30);
+    background: govuk-tint(govuk-colour("red"), 80);
+  }
+}
+
+.app-status-list__link-content {
+  padding: 15px;
+  width: 100%;
+  @include govuk-media-query(tablet) {
+    padding: 25px;
+  }
+}
+
 .app-status-list__link-text {
   color: inherit;
   text-decoration: underline;
   margin: 0;
+  @include govuk-media-query(tablet) {
+    float: left;
+  }
+}
+
+.app-status-list__tag {
+  margin-top: 10px;
+  @include govuk-media-query(tablet) {
+    float: right;
+    margin-top: 0;
+    margin-left: 15px;
+  }
 }
 
