@@ -51,7 +51,7 @@
 {% block content %}
 
 <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-grid-column-full">
 
       <div class="app-notification-banner app-notification-banner--with-icon app-notification-banner--success">
         <span class="app-notification-banner__icon das-text--success-icon"></span>
@@ -74,13 +74,35 @@
 
       <ol class="govuk-list app-status-list">
         <li class="app-status-list__list-item">
-          <a href="#" class="app-status-list__link">
-            <h3 class="app-status-list__link-text">Confirm your apprenticeship details</h3>
+          <a href="#" class="app-status-list__link app-status-list__link--success">
+            <div class="app-status-list__link-content">
+              <h3 class="app-status-list__link-text">Your employer</h3>
+              <strong class="app-status-list__tag govuk-tag govuk-tag--green">
+                Complete
+              </strong>
+            </div>
           </a>
         </li>
         <li class="app-status-list__list-item">
+          <a href="#" class="app-status-list__link app-status-list__link--error">
+
+            <div class="app-status-list__link-content">
+            <h3 class="app-status-list__link-text">Your training provider</h3>
+            <strong class="app-status-list__tag govuk-tag govuk-tag--red">
+              Waiting for correction
+            </strong>
+            </div>
+          </a>
+        </li>
+
+        <li class="app-status-list__list-item">
           <a href="#" class="app-status-list__link">
-            <h3 class="app-status-list__link-text">Confirm your training details</h3>
+            <div class="app-status-list__link-content">
+            <h3 class="app-status-list__link-text">Details of your apprenticeship</h3>
+            <strong class="app-status-list__tag govuk-tag govuk-tag--yellow">
+              Incomplete
+            </strong>
+            </div>
           </a>
         </li>
       </ol>
