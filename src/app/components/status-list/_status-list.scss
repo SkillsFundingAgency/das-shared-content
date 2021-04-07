@@ -23,14 +23,11 @@ li.app-status-list__list-item {
   &:focus {
     border-color: $govuk-focus-colour;
     outline: $govuk-focus-width solid transparent;
-    box-shadow: 0 -2px $govuk-focus-colour, 0 4px $govuk-focus-text-colour;
+    box-shadow: 0 0 $govuk-focus-colour, 0 3px $govuk-focus-text-colour;
   }
   &:hover,
   &:focus {
     transform: scale(1.05);
-  }
-  @include govuk-media-query(tablet) {
-
   }
   &:before {
     content: counter(number);
