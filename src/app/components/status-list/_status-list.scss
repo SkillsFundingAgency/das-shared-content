@@ -17,10 +17,17 @@ li.app-status-list__list-item {
   text-decoration: none;
   box-shadow: 0 0 10px 0 rgba(11, 12, 12, 0.2);
   border: $govuk-border-width-form-element solid #f9f8f8;
+  transition: all .3s ease;
   @include govuk-link-style-default;
+  &:active,
   &:focus {
     border-color: $govuk-focus-colour;
     outline: $govuk-focus-width solid transparent;
+    box-shadow: 0 -2px $govuk-focus-colour, 0 4px $govuk-focus-text-colour;
+  }
+  &:hover,
+  &:focus {
+    transform: scale(1.05);
   }
   @include govuk-media-query(tablet) {
 
